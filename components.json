@@ -19,6 +19,7 @@
   },
   "iconLibrary": "lucide",
   "registries": {
-    "@acme": "https://acme.com/r/{name}.json"
+    "@acme": "https://acme.com/r/{name}.json",
+    "@basecn": "https://basecn.dev/r/{name}.json"
   }
 }
