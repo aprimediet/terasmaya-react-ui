@@ -6,7 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 export type IColumn<T> = {
   key: string;
   dataIndex: string;
-  title: string;
+  title: string | JSX.Element;
   className?: string;
   render?: (data: unknown, row: T) => JSX.Element;
 };
@@ -62,7 +62,7 @@ export function DataTable<T>({ loading, columns, data }: Readonly<IDataTableProp
     <TableSkeleton />
   ) : (
     <div className="flex flex-col gap-4">
-      <Table>
+      <Table className="text-sm">
         <TableHeader>
           <TableRow>
             {columns.map((x, index) => (
@@ -88,6 +88,9 @@ export function DataTable<T>({ loading, columns, data }: Readonly<IDataTableProp
           ))}
         </TableBody>
       </Table>
+      <div className="flex flex-1 flex-row-reverse justify-between w-full">
+        <span className="text-gray-400 text-sm">Showing 1 to 25 of 100 entries</span>
+      </div>
     </div>
   );
 }
