@@ -1,7 +1,16 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "target": "ES2023",
+    "lib": [
+      "ES2023"
+    ],
+    "module": "ESNext",
+    "types": [
+      "node"
+    ],
     "jsx": "react-jsx",
+    "moduleResolution": "bundler",
     "paths": {
       "@qui/*": [
         "./src/*"
