@@ -6,8 +6,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* @tailwind utilities; */
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -127,8 +125,12 @@
   body {
     @apply bg-background text-foreground;
   }
-}
 
-button {
-  @apply rounded-full;
+  button {
+    @apply rounded-full;
+  }
+
+  [data-state="open"] {
+    animation: fadeIn 0.2s ease;
+  }
 }
